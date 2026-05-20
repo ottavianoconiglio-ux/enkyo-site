@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wqw1j27j8h");
+</script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTB1C3L6QS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTB1C3L6QS');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -1569,58 +1585,7 @@
         gap: 16px;
       }
     }
-.cookie-banner {
-  position: fixed;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 18px 20px;
-  background: var(--bianco-caldo);
-  color: var(--testo-scuro);
-  border: 1px solid rgba(184, 151, 90, 0.35);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
 
-.cookie-banner p {
-  margin: 0 0 14px;
-}
-
-.cookie-banner a {
-  color: var(--verde);
-  text-decoration: underline;
-}
-
-.cookie-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.cookie-actions button {
-  border: 1px solid var(--verde);
-  padding: 10px 18px;
-  font-family: "Jost", sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-#cookie-reject {
-  background: transparent;
-  color: var(--verde);
-}
-
-#cookie-accept {
-  background: var(--verde);
-  color: var(--bianco);
-}
     ::selection {
       background: var(--oro);
       color: var(--bianco);
@@ -2335,17 +2300,7 @@
 
     <div class="footer-copy">© 2026 ENKYŌ Studio di Psicologia · P.IVA 11835690014</div>
   </footer>
-<div id="cookie-banner" class="cookie-banner" style="display:none;">
-  <p>
-    Questo sito utilizza strumenti statistici per migliorare l’esperienza di navigazione.
-    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Leggi l’informativa privacy</a>.
-  </p>
 
-  <div class="cookie-actions">
-    <button id="cookie-reject" type="button">Rifiuta</button>
-    <button id="cookie-accept" type="button">Accetta</button>
-  </div>
-</div>
   <script>
     const navbar = document.getElementById("navbar");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -2411,57 +2366,6 @@
     );
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-    function loadGoogleAnalytics() {
-  const gaScript = document.createElement("script");
-  gaScript.async = true;
-  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-CTB1C3L6QS";
-  document.head.appendChild(gaScript);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  window.gtag = gtag;
-
-  gtag("js", new Date());
-  gtag("config", "G-CTB1C3L6QS");
-}
-
-function loadClarity() {
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);
-    t.async=1;
-    t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "wqw1j27j8h");
-}
-
-function acceptCookies() {
-  localStorage.setItem("cookieConsent", "accepted");
-  document.getElementById("cookie-banner").style.display = "none";
-  loadGoogleAnalytics();
-  loadClarity();
-}
-
-function rejectCookies() {
-  localStorage.setItem("cookieConsent", "rejected");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-
-const cookieConsent = localStorage.getItem("cookieConsent");
-const cookieBanner = document.getElementById("cookie-banner");
-
-if (cookieConsent === "accepted") {
-  loadGoogleAnalytics();
-  loadClarity();
-} else if (cookieConsent === "rejected") {
-  cookieBanner.style.display = "none";
-} else {
-  cookieBanner.style.display = "block";
-}
-
-document.getElementById("cookie-accept").addEventListener("click", acceptCookies);
-document.getElementById("cookie-reject").addEventListener("click", rejectCookies);
   </script>
 </body>
 </html>
